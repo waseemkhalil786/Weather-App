@@ -1,34 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-};
-body{
-    background-image: url("https://t3.ftcdn.net/jpg/05/79/86/10/360_F_579861052_KjeAAbyaXOBY6JjxMEPBVJypp2KSb59v.jpg");
-    background-size: cover;
-
-    font-family: "Poppins",sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100vh;
-};
-.container{
-    max-width: 800px;
-    width: 100%;
-    background-color: aliceblue;
-    border-radius: 25px;
-    box-shadow: 0 15px 15px black;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.wrapper{
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    grid-gap: 1rem;
+body {
+  background-image: url("./asset\ 03.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
 }
-.img-section{
-    border-radius: 25px;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW59-S4qnIv1gGWEgak-j60DV07ij8BKFV8g&s");
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: rgb(243, 250, 249);
+  border-radius: 25px;
+  box-shadow: 0 15px 15px rgb(114, 111, 111);
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-gap: 1rem;
+}
+.img-section {
+  border-radius: 25px;
+  background-image: url("./asset\ 02.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: scale(1.03) perspective(200px);
+}
+.img-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #222227 10%, #0c0c13 100%);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 25px;
+}
+.default-date {
+  padding: 0;
+  text-align: center;
+}
+.default-date img {
+  width: 80%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.default-date h2 {
+  font-size: 3rem;
+}
+.default-date h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.weather-temp {
+  font-size: 4rem;
+  font-weight: 800;
+}
+/* content section */
+.content-section {
+  padding: 1.5rem;
+}
+.content-section form {
+  margin: 1.5rem;
+  position: relative;
+}
+.content-section form input {
+  width: 84%;
+  outline: none;
+  background: transparent;
+  border: 1px solid #37474f;
+  border-radius: 5px;
+  padding: 0.7rem;
+  font-family: inherit;
+  color: #8d9980;
+  font-size: 1.5rem;
+}
+.content-section form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 1rem 0.7rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-color: #71807b;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.day-info .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+.day-info .title {
+  font-weight: 600;
+}
+.list-content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 3rem 0rem;
+  box-shadow: 0 5px 15px #0c0c13;
+}
+.list-content ul li {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+}
+.list-content ul li:hover {
+  transform: scale(1.1);
+  background-color: #85e1f1;
+  color: #0c0c13;
+  box-shadow: 0 5px 15px #58869b;
+  cursor: pointer;
+}
+.list-content ul li img {
+  width: 50%;
+  object-fit: cover;
+}
+.icons {
+  opacity: 0;
+}
+.icons.fadeIn {
+  animation: 0.5 fadeIn forwards;
+  animation-delay: 0.7s;
+}
+@keyframes fadeIn {
+  to {
+    transition: all 0.5s ease-in;
+    opacity: 1;
+  }
 }
